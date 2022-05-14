@@ -21,5 +21,5 @@ secret = "YOUR_CLIENT_SECRET"
 
 > Run the bot
 ```bash
-python3 bot.py
+python3 main.py
 ```
