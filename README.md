@@ -8,8 +8,15 @@ git clone https://github.com/theo2612/Painful-IT-bot
 ```
 
 > Install dependancies
+
+* Linux
 ```bash
 python3 -m pip install -r requirements.txt
+```
+
+* Windows
+```bash
+python -m pip install -r requirements.txt
 ```
 
 > Create a `secret.py` file with the contents
