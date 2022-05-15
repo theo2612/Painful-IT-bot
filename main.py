@@ -30,7 +30,10 @@ async def on_message(message):
     if str(bot.user.id) in message.content:
         await message.channel.send(f"My prefix is {prefix}")
         await message.add_reaction("❤️")
-
+ async def on_message(message):
+    if str(bot.user.id) in message.content:
+        await message.channel.send(f"My prefix is {prefix}")
+        await message.add_reaction("THEO")
 # Add ping cog
 bot.add_cog(ping(bot))
 
