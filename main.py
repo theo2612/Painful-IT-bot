@@ -24,6 +24,13 @@ async def on_ready():
     await bot.change_presence(activity=discord.Game(f"My prefix is {prefix}"))
     print("I'm up and running!")
 
+# Reply to ping with prefix
+@bot.event
+async def on_message(message):
+    if str(bot.user.id) in message.content:
+        await message.channel.send(f"My prefix is {prefix}")
+        await message.add_reaction("❤️")
+
 # Add ping cog
 bot.add_cog(ping(bot))
 
