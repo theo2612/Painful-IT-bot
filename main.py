@@ -11,6 +11,8 @@ from config import *
 # Import cogs
 from cogs.ping import ping
 from cogs.help import help
+from cogs.joke import joke
+
 # Create bot and remove the help command since we will make our own
 bot = commands.Bot(command_prefix=prefix, help_command=None)
 
@@ -26,6 +28,9 @@ bot.add_cog(ping(bot))
 
 # Add help cog
 bot.add_cog(help(bot))
+
+# Add joke cog
+bot.add_cog(joke(bot))
 
 # Run bot with specified secret
 bot.run(secret)
