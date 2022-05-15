@@ -10,6 +10,7 @@ class pandafact(commands.Cog):
     # Define joke command
     @commands.command()
     async def pandafact(self, ctx):
+       await ctx.send("Holdon a second...")
        # Get a joke
        fact = json.loads(requests.get('https://some-random-api.ml/facts/panda').text)['fact']
        await ctx.reply(fact)

@@ -10,6 +10,7 @@ class joke(commands.Cog):
     # Define joke command
     @commands.command()
     async def joke(self, ctx):
+       await ctx.send("Holdon a second...")
        # Get a joke
        joke = json.loads(requests.get('https://some-random-api.ml/joke').text)['joke']
        await ctx.reply(joke)
